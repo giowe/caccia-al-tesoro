@@ -1,0 +1,19 @@
+{
+  "name": "treasure-hunt",
+  "version": "1.0.0",
+  "description": "Treasure Hunt is an interactive server-based game where players, organized in teams, search for hidden treasures on a virtual playing field. Each team must dig at different coordinates to find treasures, earning points for each discovery and losing points for unsuccessful attempts.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "keywords": [],
+  "author": "Giovanni Bruno",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
