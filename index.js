@@ -132,7 +132,17 @@ app.get("/dig", (req, res) => {
 
 // GET endpoint to view the map
 app.get("/map", (req, res) => {
-  res.status(200).json(map)
+  const mapClone = JSON.parse(JSON.stringify(map))
+
+  for (let y = 0; y < MAP_SIZE; y++) {
+    for (let x = 0; x < MAP_SIZE; x++) {
+      if (!mapClone[y][x].dug) {
+        mapClone[y][x].treasure = null
+      }
+    }
+  }
+
+  res.status(200).json(clone)
 })
 
 // GET endpoint for the leaderboard
