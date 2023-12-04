@@ -101,7 +101,7 @@ app.get("/dig", (req, res) => {
   for (let i = 0; i < treasures.length; i++) {
     const t = treasures[i]
     if (!map[t.y][t.x].dug) {
-      
+
       const distance = Math.sqrt(Math.pow(digX - t.x, 2) + Math.pow(digY - t.y, 2))
       console.log({
         distance,
@@ -142,7 +142,7 @@ app.get("/map", (req, res) => {
     }
   }
 
-  res.status(200).json(clone)
+  res.status(200).json(mapClone)
 })
 
 // GET endpoint for the leaderboard
